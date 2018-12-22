@@ -12,10 +12,6 @@ This assignmint is a step-by-step description of a docker-compose application ta
 - Jenkins:
 - SonarQube:
 - Jira:
-- 
-
-
-
 
 
 ## Content
@@ -84,6 +80,18 @@ The app is composesd of:
     - stores sonarqube configuration
   - sonarqube_data: 
     - stores sonarqube data
+  - sonarqube_extensions:
+    - stores sonarqube extensions
+  - postgresql:
+    - stores postgresql
+  - postgresql:
+    - stores postgresql data
+
+### Jenkins
+#### 
+#### extensions
+- Checkstyle Plug-in
+- Copy Artifact
 
 
 
