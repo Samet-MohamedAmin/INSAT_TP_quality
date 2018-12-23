@@ -21,8 +21,27 @@ in fedora:
 [MohamedAmin@samet ]$ systemctl start docker
 ```
 
-- To test it: `$ systemctl status docker`
+- view the status of docker server: `$ systemctl status docker`
+``` bash
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor pre>
+   Active: active (running) since Sun 2018-12-23 20:50:54 CET; 1h 50min ago
+     Docs: https://docs.docker.com
+ Main PID: 5059 (dockerd)
+    Tasks: 230
+   Memory: 85.4M
+      CPU: 53.170s
+   CGroup: /system.slice/docker.service
+           ├─ 5059 /usr/bin/dockerd
+           ├─ 5070 docker-containerd --config /var/run/docker/containerd/contai>
+           ├─ 5752 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port>
+           ├─ 5789 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port>
+           ├─ 5860 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port>
+           ├─ 5873 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port>
+```
 
+### Demonstration
+Overall the application, we are going to use `docker-compose` and benifit from its network management strategy, port-mapping, mounting volumes..
 
 
 ## Sonarqube

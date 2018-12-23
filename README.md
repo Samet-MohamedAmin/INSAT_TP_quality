@@ -34,14 +34,14 @@ This assignmint is a step-by-step description of a docker-compose application ta
 - [jenkins pipeline](jenkins_pipeline.md)
   - [Why the use of pipeline](#jenkins_pipeline.mdwhy-the-use-of-pipeline)
   - [Pipeline process](#jenkins_pipeline.mdpipeline-process)
-- [kubernetes demo](kubernets.md)
+- [kubernetes demo](kubernetes.md)
 - [jira](jira.md)
 
 ## TODO
 - [ ] docker explaination
 - [ ] kubernetes example
 - [x] explain pipeline build in details
-- [ ] check globally the assignment
-- [ ] fully integegrate madou's part
+- [x] fully integegrate madou's part
 - [ ] jira plugin
 - [x] seperate the project paragraphs
+- [ ] check globally the assignment
