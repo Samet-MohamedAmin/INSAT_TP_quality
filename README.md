@@ -15,7 +15,30 @@ This assignmint is a step-by-step description of a docker-compose application ta
 
 
 ## Content
-
+- [Quality TP-2 Compte Rendu](#quality-tp-2-compte-rendu)
+  - [Description](#description)
+  - [Environment](#environment)
+  - [Content](#content)
+  - [Tools description](#tools-description)
+    - [Docker](#docker)
+      - [Setup](#setup)
+        - [Linux](#linux)
+          - [Installation](#installation)
+          - [Run service](#run-service)
+        - [Windows](#windows)
+    - [Sonarqube](#sonarqube)
+    - [Jenkins](#jenkins)
+  - [App Process](#app-process)
+    - [Structure](#structure)
+    - [Jenkins](#jenkins-1)
+      - [Global tool configuration](#global-tool-configuration)
+      - [Plugins](#plugins)
+      - [starting new project](#starting-new-project)
+    - [Checkstyle](#checkstyle)
+    - [Tomcat](#tomcat)
+    - [Sonarqube](#sonarqube-1)
+  - [Pipeline](#pipeline)
+  - [TODO](#todo)
 
 
 ## Tools description
@@ -43,8 +66,8 @@ in fedora:
 - To test it: `$ systemctl status docker`
 
 ##### Windows
----
----
+_paragraph not updated yet_  
+[take a look here](./docker_windows.md)
 
 
 ### Sonarqube
@@ -134,6 +157,10 @@ In this app we prepared two tomcat servers: One a developement server and the ot
 ![](images/tomcat/img_tomcat_02.png)
 
 ### Sonarqube
+_paragraph not updated yet_  
+[take a look here](./sonarqube.md)
+
+
 Sonarqube configuaraions are described within spring-boot project properties
 ``` xml
   <properties>
@@ -164,3 +191,9 @@ Making a build based on pipeline have a lot of benifits:
 ![](images/pipeline/img_pipeline_05.png)
 
 
+## TODO
+- [ ] docker explaination
+- [ ] kubernetes example
+- [ ] explain pipeline build in details
+- [ ] check globally the assignment
+- [ ] fully integegrate madou's part
