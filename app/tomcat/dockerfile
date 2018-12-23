@@ -1,0 +1,4 @@
+FROM tomcat
+
+COPY ./conf/tomcat-users.xml conf/tomcat-users.xml
+COPY ./conf/context.xml webapps/manager/META-INF/context.xml

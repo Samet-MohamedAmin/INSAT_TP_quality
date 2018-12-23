@@ -1,0 +1,73 @@
+version: "3"
+services:
+  jenkins:
+    image: jenkins-full
+    container_name: jenkins-full
+    build:
+      context: ./jenkins-full
+    volumes:
+      - ./data/jenkins/jenkins_home:/var/jenkins_home
+    environment:
+      - MONGO_DATABASE=bookstore
+      - MONGO_HOST=mongo
+      - MONGO_PORT=27017
+      - SONAR_HOST=sonar
+    links:
+      - mongo
+      - sonarqube
+    ports:
+      - 8080:8080
+      - 8081:8081
+      - 50000:50000
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    # restart: always
+    volumes:
+      - "./data/mongod:/data/db/journal"
+
+  sonarqube:
+    image: sonarqube
+    container_name: sonarqube
+    ports:
+      - 9000:9000
+      - 9002:9002
+    environment:
+      - sonar.jdbc.url=jdbc:postgresql://sonar_db:5432/sonar
+    volumes:
+      - sonarqube_conf:/opt/sonarqube/conf
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+
+  sonar_db:
+    image: postgres
+    container_name: sonar-db
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar
+    volumes:
+      - postgresql:/var/lib/postgresql
+      - postgresql_data:/var/lib/postgresql/data
+
+  tomcat:
+    container_name: tomcat
+    build:
+      context: ./tomcat
+    ports:
+      - 8090:8080
+
+  tomcat-deploy:
+    container_name: tomcat-deploy
+    build:
+      context: ./tomcat
+    ports:
+      - 8091:8080
+
+volumes:
+  # jenkins_full_home:
+  sonarqube_conf:
+  sonarqube_data:
+  sonarqube_extensions:
+  postgresql:
+  postgresql_data:

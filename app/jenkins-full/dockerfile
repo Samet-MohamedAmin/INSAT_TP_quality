@@ -1,0 +1,7 @@
+FROM jenkins/jenkins
+
+USER root
+RUN apt-get update
+
+# install maven
+RUN apt-get install -y maven
