@@ -151,8 +151,16 @@ Sonarqube configuaraions are described within spring-boot project properties
 
 
 ## Pipeline
+This is the pipeline we are going to create:
+![](images/pipeline/img_pipeline_01.png)
 
+Making a build based on pipeline have a lot of benifits:
+- separation of concern. ie: focus on each job separaly of the others.
+- If the build fails in a secondary step, the project won't broke-up.
+- Adding a step or removing a step becomes really easy.
+- Configuration becomes really fast and easy.
 
-
+> in this example, we have encountered an error in `static-analysis` and `sonarqube` jobs and that didn't affect the deployment process at all
+![](images/pipeline/img_pipeline_05.png)
 
 
