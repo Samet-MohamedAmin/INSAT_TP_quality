@@ -37,7 +37,10 @@ This assignmint is a step-by-step description of a docker-compose application ta
     - [Checkstyle](#checkstyle)
     - [Tomcat](#tomcat)
     - [Sonarqube](#sonarqube-1)
+  - [Kubernetes](#kubernetes)
+  - [Jira](#jira)
   - [Pipeline](#pipeline)
+    - [Pipeline process](#pipeline-process)
   - [TODO](#todo)
 
 
@@ -133,6 +136,7 @@ While building the developement environement, we are going to use these plugins.
 - Build Pipeline Plugin
 - Copy Artifact Plugin
 - Deploy to container Plugin
+- Jira plugin
 
 #### starting new project
 - source code
@@ -151,7 +155,7 @@ While building the developement environement, we are going to use these plugins.
 
 
 ### Tomcat
-In this app we prepared two tomcat servers: One a developement server and the other as deployment server.
+In this app we prepared two tomcat servers: One as developement server and the other as deployment server.
 
 - Tomcat job configuration
 ![](images/tomcat/img_tomcat_02.png)
@@ -176,6 +180,12 @@ Sonarqube configuaraions are described within spring-boot project properties
 - To tigger build:
 ![](images/sonarqube/img_sonarqube_01.png)
 
+## Kubernetes
+Using kubernetes plugin, we can trigger kuberntes configuration like so where yaml configuration files are provided inside the project.
+![](images/kubernetes/img_kubernetes_01.png)
+
+## Jira
+
 
 ## Pipeline
 This is the pipeline we are going to create:
@@ -190,6 +200,12 @@ Making a build based on pipeline have a lot of benifits:
 > in this example, we have encountered an error in `static-analysis` and `sonarqube` jobs and that didn't affect the deployment process at all
 ![](images/pipeline/img_pipeline_05.png)
 
+### Pipeline process
+- pacakaging project will generate a `.war` file and will archived thanks to ``
+![](images/pipeline/img_pipeline_06.png)
+- after successful build it will trigger automatically three projects:
+![](images/pipeline/img_pipeline_07.png)
+
 
 ## TODO
 - [ ] docker explaination
@@ -197,3 +213,4 @@ Making a build based on pipeline have a lot of benifits:
 - [ ] explain pipeline build in details
 - [ ] check globally the assignment
 - [ ] fully integegrate madou's part
+- [ ] add jira plugin
