@@ -38,7 +38,7 @@ This assignmint is a step-by-step description of a docker-compose application ta
 - [jira](jira.md)
 
 ## TODO
-- [ ] docker explaination
+- [x] docker explaination
 - [ ] kubernetes example
 - [x] explain pipeline build in details
 - [x] fully integegrate madou's part
