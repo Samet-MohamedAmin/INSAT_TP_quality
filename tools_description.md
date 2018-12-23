@@ -1,7 +1,31 @@
 
 
+# Tools description and use
+## Docker
+### Setup
+#### Installation
+By default docker is provided within most of the official distrubtion repositories and it is designed to work perfectly inside a Unix-like envirnment. So in general no configuration is needed.  
+- basic installation:
+``` bash
+[MohamedAmin@samet ]$ sudo dnf install docker -y
+```
 
-## SonarQube
+> In some cases when the official repositories does not offer the newest features that we want to use, following these installation instructions may be helpful https://docs.docker.com/install/linux/docker-ce/fedora
+
+#### Run service
+There are some different models to manage containers. Docker implements the `client/server` model. Docker is set of tools that manipulates docker containers. And in general docker is composed of docker client that communicates with the Docker daemon via a client/server operation. Then the Docker daemon creates the container and handles communications of stdin/stdout back to the Docker client tool.
+Then when whenever we want to use docker, we have to run docker server
+
+in fedora:
+``` bash
+[MohamedAmin@samet ]$ systemctl start docker
+```
+
+- To test it: `$ systemctl status docker`
+
+
+
+## Sonarqube
 The SonarQube Platform is made of 4 components:
 ![](images/madou/img-000.jpg)
 
@@ -46,3 +70,10 @@ After a build success we can now open http://localhost:9000 to observe this inte
 Thus in intelIj we can add a plugin called SonarLint that do scan the code for issues and errors
 
 ![](images/madou/img-007.jpg)
+
+
+## Jenkins
+
+
+
+
