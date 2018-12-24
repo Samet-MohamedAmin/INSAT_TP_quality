@@ -7,11 +7,23 @@ This assignmint is a step-by-step description of a docker-compose application ta
 ## Environment
 - linux os: Fedora 29
 - Windows os: Windows 10
-- Docker:
-- Kubernetes:
-- Jenkins:
-- SonarQube:
-- Jira:
+- Docker: 18.06.1-ce
+- Kubernetes
+  - client: v1.10.3
+  - server: v1.10.0
+- minkube: v0.30.0
+- Jenkins: 2.152
+  - Pipeline: 2.6
+  - Build Pipeline Plugin: 1.5.8	
+  - Checkstyle Plug-in: 4.0.0	
+  - Copy Artifact Plugin: 1.41	
+  - Deploy to container Plugin: 1.13
+  - JIRA plugin: 3.0.5
+  - Kubernetes: 1.14.0	
+- SonarQube: 6.7.6
+- tomcat: 8.5 lts
+- mongo: 4.0.4 lts
+- Jira: 7.13
 
 
 ## Content
@@ -51,6 +63,8 @@ This assignmint is a step-by-step description of a docker-compose application ta
   - [Dashboard](kubernetes.md#dashboard)
   - [Jenkins Kubernetes plugin](kubernetes.md#jenkins-kubernetes-plugin)
 - [jira](jira.md)
+  - [Basic use](jira.md#basic-use)
+  - [Jenkins Integration](jira.md#jenkins_integration)
 
 ## TODO
 - [x] docker explaination
@@ -59,6 +73,7 @@ This assignmint is a step-by-step description of a docker-compose application ta
 - [x] fully integegrate madou's part
 - [x] jenkins description
 - [x] jira plugin
+- [x] add checkstyle demo
 - [x] seperate the project paragraphs
-- [ ] add tools versions
+- [x] add tools versions
 - [ ] check globally the assignment

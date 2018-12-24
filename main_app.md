@@ -74,6 +74,12 @@ While building the developement environement, we are going to use these plugins.
 - activate checksyle plugin
 ![](images/checkstyle/img_checkstyle_01.png)
 
+- Then in every successful build, we can view checkstyle result and a detailed review of the code.
+![](images/checkstyle/img_checkstyle_04.png)
+![](images/checkstyle/img_checkstyle_03.png)
+
+> Sonarqube may include by default checkstyle features, but we've added the static analysis step just for demonstration purposes.
+
 
 ## Tomcat
 In this app we prepared two tomcat servers: One as developement server and the other as deployment server.
