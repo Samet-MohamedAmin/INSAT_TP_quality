@@ -42,7 +42,7 @@ in fedora:
 
 ### Demonstration
 Overall the application, we are going to use `docker-compose` and benifit from its network management strategy, port-mapping, mounting volumes..
-You can take a look at [docker-compose](app/docker-compose.yml) file and view its content.
+> You can take a look at [docker-compose](app/docker-compose.yml) file and view its content.
 
 
 ## Sonarqube

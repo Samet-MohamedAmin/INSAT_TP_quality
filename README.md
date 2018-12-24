@@ -32,14 +32,24 @@ This assignmint is a step-by-step description of a docker-compose application ta
   - [Tomcat](main_app.md#tomcat)
   - [Sonarqube](main_app.md#sonarqube)
 - [jenkins pipeline](jenkins_pipeline.md)
-  - [Why the use of pipeline](#jenkins_pipeline.mdwhy-the-use-of-pipeline)
-  - [Pipeline process](#jenkins_pipeline.mdpipeline-process)
+  - [Why the use of pipeline](jenkins_pipeline.md#why-the-use-of-pipeline)
+  - [Pipeline process](jenkins_pipeline.md#pipeline-process)
 - [kubernetes demo](kubernetes.md)
+  - [Introduction](kubernetes.md#introduction)
+  - [Setup](kubernetes.md#setup)
+  - [Understanding kubernetes basics](kubernetes.md#understanding-kubernetes-basics)
+    - [First step](kubernetes.md#first-step)
+    - [Loading configuration](kubernetes.md#loading-configuration)
+    - [Understanding minikube concept](kubernetes.md#understanding-minikube-concept)
+    - [Deleting loaded configuration](kubernetes.md#deleting-loaded-configuration)
+  - [Deployment object](kubernetes.md#deployment-object)
+  - [Dashboard](kubernetes.md#dashboard)
+  - [Jenkins Kubernetes plugin](kubernetes.md#jenkins-kubernetes-plugin)
 - [jira](jira.md)
 
 ## TODO
 - [x] docker explaination
-- [ ] kubernetes example
+- [x] kubernetes example
 - [x] explain pipeline build in details
 - [x] fully integegrate madou's part
 - [ ] jira plugin
