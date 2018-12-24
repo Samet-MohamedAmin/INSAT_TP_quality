@@ -17,11 +17,16 @@ This assignmint is a step-by-step description of a docker-compose application ta
 ## Content
 - [tools description](tools_description.md)
   - [Docker](tools_description.md#docker)
-    - [Setup](tools_description.md#setup)
+    - [Docker setup](tools_description.md#docker_setup)
       - [Installation](tools_description.md#installation)
       - [Run service](tools_description.md#run-service)
+      - [Demonstration](tools_description.md#Demonstration)
   - [Sonarqube](tools_description.md#sonarqube)
+    - [Sonarqube structure](tools_description.md#sonarqube_structure)
+    - [Sonarqube test](tools_description.md#sonarqube_test)
   - [Jenkins](tools_description.md#jenkins)
+    - [Jenkins setup](tools_description.md#jenkins_setup)
+    - [New project](tools_description.md#new_project)
 - [main application](main_app.md)
   - [Structure](main_app.md#structure)
   - [Jenkins](main_app.md#jenkins)
@@ -52,6 +57,7 @@ This assignmint is a step-by-step description of a docker-compose application ta
 - [x] kubernetes example
 - [x] explain pipeline build in details
 - [x] fully integegrate madou's part
+- [x] jenkins description
 - [ ] jira plugin
 - [x] seperate the project paragraphs
 - [ ] check globally the assignment

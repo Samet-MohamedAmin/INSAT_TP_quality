@@ -2,7 +2,7 @@
 
 # Tools description and use
 ## Docker
-### Setup
+### Docker setup
 #### Installation
 By default docker is provided within most of the official distrubtion repositories and it is designed to work perfectly inside a Unix-like envirnment. So in general no configuration is needed.  
 - basic installation:
@@ -46,6 +46,7 @@ Overall the application, we are going to use `docker-compose` and benifit from i
 
 
 ## Sonarqube
+### Sonarqube structure
 The SonarQube Platform is made of 4 components:
 ![](images/madou/img-000.jpg)
 
@@ -59,26 +60,22 @@ The SonarQube Platform is made of 4 components:
 3. Multiple SonarQube Plugins installed on the server, possibly including language, SCM, integration, authentication, and governance plugins
 4. One or more SonarScanners running on your Build / Continuous Integration Servers to analyze projects
 
-
+### Sonarqube test
 We can work online on SonarQube in the last versions but we will be installing it locally for this project, let’s start with installing and lunching SonarQube:  
-
 ![](images/madou/img-001.jpg)
 
 
 After unzipping the content of the zip downloaded in `C:\SonarQube-7.4` foe example, we can start it with a simple command 
 `C:\SonarQube-7.4\bin\windows-x86-64\StartSonar.bat`
 Then going to http://localhost:9000 we will see the home page of SonarQube 
-
 ![](images/madou/img-003.jpg)
 
 
 To test SonarQube we will be using maven project, so we need to add sonar plugin into `pom.xml`
-
 ![](images/madou/img-004.jpg)
 
 
 After running clean and install, we can run `sonar:sonar` plugin
-
 ![](images/madou/img-005.jpg)
 
 
@@ -88,12 +85,23 @@ After a build success we can now open http://localhost:9000 to observe this inte
 
 
 Thus in intelIj we can add a plugin called SonarLint that do scan the code for issues and errors
-
 ![](images/madou/img-007.jpg)
 
 
 ## Jenkins
+Jenkins is an open source automation server written in Java. Jenkins helps to automate the non-human part of the software development process, with continuous integration and facilitating technical aspects of continuous delivery. It is a server-based system that runs in servlet containers such as Apache Tomcat. It supports version control tools, including AccuRev, CVS, Subversion, Git, Mercurial, Perforce, TD/OMS, ClearCase and RTC, and can execute Apache Ant, Apache Maven and sbt based projects as well as arbitrary shell scripts and Windows batch commands. The creator of Jenkins is Kohsuke Kawaguchi. Released under the MIT License, Jenkins is free software. [wikipedia]
+
+### Jenkins setup
+- In this part, we are goin to use jenkins docker image from [hub.docker.com](http://hub.docker.com/_/jenkins). All jenkins configuration will take place in its [dockerfile](app/jenkins-full/dockerfile) and [docker-compose](app/jenkins-full/docker-compose.yml) file.
+- After running jenkins image:
+   - configure jenkins to run on port `8080`
+   - create admin user
+   - install default plugins.
+### New project
+- After installing default plugins, we can start new project by selecting its type and inserting name.
+![](images/jenkins/img_jenkins_08.png)
 
 
+[wikipedia]: (https://en.wikipedia.org/wiki/Jenkins_(software))
 
-
+> We'll explore more jenkins next while describing the build process pipeline
