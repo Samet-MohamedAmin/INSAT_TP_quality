@@ -58,6 +58,7 @@ This assignmint is a step-by-step description of a docker-compose application ta
 - [x] explain pipeline build in details
 - [x] fully integegrate madou's part
 - [x] jenkins description
-- [ ] jira plugin
+- [x] jira plugin
 - [x] seperate the project paragraphs
+- [ ] add tools versions
 - [ ] check globally the assignment
