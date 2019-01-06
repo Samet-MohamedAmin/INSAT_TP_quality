@@ -101,7 +101,8 @@ Jenkins is an open source automation server written in Java. Jenkins helps to au
 - After installing default plugins, we can start new project by selecting its type and inserting name.
 ![](images/jenkins/img_jenkins_08.png)
 
-
-[wikipedia]: (https://en.wikipedia.org/wiki/Jenkins_(software))
-
 > We'll explore more jenkins next while describing the build process pipeline
+
+
+[wikipedia]: https://en.wikipedia.org/wiki/Jenkins_(software)
+
