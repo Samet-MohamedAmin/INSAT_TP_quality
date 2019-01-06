@@ -75,7 +75,7 @@ To test SonarQube we will be using maven project, so we need to add sonar plugin
 ![](images/madou/img-004.jpg)
 
 
-After running clean and install, we can run `sonar:sonar` plugin
+After running clean and install, we can run `sonar:sonar` plugin  
 ![](images/madou/img-005.jpg)
 
 
