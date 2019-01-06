@@ -148,5 +148,5 @@ client-pod                           1/1       Running             0          22
 
 
 ## Jenkins Kubernetes plugin
-Using kubernetes plugin, we can trigger kuberntes configuration like so where yaml configuration files are provided inside the project.
+Using kubernetes plugin, we can trigger kuberntes configuration like so where yaml configuration files are provided inside the project.  
 ![](images/kubernetes/img_kubernetes_01.png)
