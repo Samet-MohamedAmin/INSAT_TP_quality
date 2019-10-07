@@ -11,7 +11,7 @@
   - `Pod`: runs one or closely related containers
   - `Service`: Sets up networking in kubernetes cluster
 - Each set objects is defined within an apiVersion that is defined in top of configuration file.
-- Kuberntes load the work configuration from a `yaml` or `yam` config file and based on that configuraion it creates, manage or delete containers.
+- Kuberntes load the work configuration from a `yaml` or `yml` config file and based on that configuraion it creates, manage or delete containers.
   - to change the current configuration: `kubectl apply -f <file_name>`.
   - to get running objects: `kubectl get <object_name>`
 - While using kubernetes there are two approaches: `imperative` and `declarative`. Overall the process we are going to use the `declarative` approach.
